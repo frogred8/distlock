@@ -1,0 +1,17 @@
+language: node_js
+services: docker
+
+sudo: false
+
+node_js:
+  - "6"
+
+install:
+  - npm install -g jasmine gulp typescript
+  - npm install
+
+env:
+  - REDIS_HOST=localhost:6379
+
+before_script:
+  - docker run -d -p 6379:6379 --name redis redis
