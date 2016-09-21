@@ -1,0 +1,27 @@
+{
+  "name": "distlock",
+  "version": "1.0.1",
+  "description": "distributed lock implementation using redis, supporting promise and typescript",
+  "main": "dist/distlock.js",
+  "typings": "dist/distlock.d.ts",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "gulp build",
+    "watch": "npm run build && gulp watch",
+    "clean": "gulp clean",
+    "test": "npm run build && jasmine"
+  },
+  "license": "MIT",
+  "repository": "spearhead-ea/distlock",
+  "dependencies": {
+    "bluebird": "<3.0.0",
+    "lodash": "^4.16.1",
+    "node-uuid": "^1.4.7",
+    "redis": "^2.6.2",
+    "source-map-support": "^0.4.2"
+  },
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1"
+  }
+}
