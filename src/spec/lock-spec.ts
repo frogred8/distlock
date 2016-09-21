@@ -7,12 +7,17 @@ var client: redis.RedisClient;
 var get = Promise.promisify((k, c: (err, result) => void) => client.get(k, c));
 
 const [host, port] = (process.env.REDIS_HOST || '192.168.99.100:6379').split(':');
+console.log(host, port);
 
 describe('test lock', () => {
   beforeAll(done => {
     client = redis.createClient(port || 6379, host);
     client.once('connect', done);
     client.once('error', done);
+  });
+
+  afterAll(() => {
+    client.end();
   });
 
   it('should lock and unlock', done => {
