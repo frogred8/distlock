@@ -15,6 +15,7 @@
   "repository": "spearhead-ea/distlock",
   "dependencies": {
     "bluebird": "<3.0.0",
+    "redis-bluebird": "heycalmdown/redis-bluebird",
     "lodash": "^4.16.1",
     "node-uuid": "^1.4.7",
     "redis": "^2.6.2",
