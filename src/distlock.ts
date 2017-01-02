@@ -1,6 +1,6 @@
 import 'source-map-support/register'
 import Promise = require('bluebird');
-import redis = require('redis');
+import redis = require('redis-bluebird');
 import uuid = require('node-uuid');
 import fs = require('fs');
 

@@ -1,6 +1,6 @@
 import _ = require('lodash');
 import Promise = require('bluebird');
-import redis = require('redis');
+import redis = require('redis-bluebird');
 import { DistLock } from '../distlock';
 
 var client: redis.RedisClient;
