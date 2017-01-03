@@ -3,7 +3,6 @@
   "version": "1.0.1",
   "description": "distributed lock implementation using redis, supporting promise and typescript",
   "main": "dist/distlock.js",
-  "typings": "dist/distlock.d.ts",
   "scripts": {
     "prepublish": "npm run build",
     "build": "gulp build",
